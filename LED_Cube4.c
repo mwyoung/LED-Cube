@@ -22,12 +22,6 @@
 #define BJT2 PC2
 #define BJT3 PC3
 #define ALL_BJT_OFF ~( (1<<BJT0)|(1<<BJT1)|(1<<BJT2)|(1<<BJT3) )
-#define TIMERFPS_240 16
-#define TIMERFPS_120 33
-#define TIMERFPS_60 66
-#define TIMERFPS_30 132
-#define TIMERFPS_15 255
-#define TIMERFPS TIMERFPS_240
 
 #define CUBE_BLUE_CORNER 0b1001000000001001
 #define CUBE_BLUE_CENTER 0b0000011001100000
@@ -68,12 +62,8 @@ void io_init(void){
 
     //Timer
     // frequency/cycle/count to/layers = FPS
-#ifndef TIMERFPS
     // 16000000UL/1024/16/4 = 244 FPS
     OCR2A = 16; //value to count to
-#else
-    OCR2A = TIMERFPS;
-#endif
     TCCR2A |= (1<<WGM21); //CTC mode
     TIMSK2 |= (1<<OCIE2A); //interrupt on compare match, for A reg
     TCCR2B |= (1<<CS22)|(1<<CS21)|(1<<CS20); //clk/1024 scale
@@ -106,54 +96,81 @@ ISR(TIMER2_COMPA_vect){
     }
 }
 
-void delay(void){
+void delay(){
     uint8_t i;
     for(i=0;i<20;i++){_delay_ms(100);}
+}
+
+void all_on(void){
+    uint8_t i;
+    for(i=0;i<4;i++){
+        cube[i] = 0xFFFF;
+    }
+}
+
+void all_off(void){
+    uint8_t i;
+    for(i=0;i<4;i++){
+        cube[i] = 0x0000;
+    }
+}
+
+void bring_up(void){
+    all_off();
+    uint8_t i;
+    for(i=0;i<4;i++){
+        cube[i] = 0xFFFF;
+        delay();
+    }
+}
+
+void star_burst(void){
+    all_off();
+    cube[1] = CUBE_BLUE_CENTER;
+    cube[2] = CUBE_BLUE_CENTER;
+    delay();
+    cube[0] = CUBE_BLUE_CORNER;
+    cube[3] = CUBE_BLUE_CORNER;
+    delay();
+}
+
+void all_green(void){
+    uint8_t i;
+    for(i=0;i<4;i++){
+        if (i==1 || i==2){
+            cube[i] = ~CUBE_BLUE_CENTER;
+        }
+        else {
+            cube[i] = ~CUBE_BLUE_CORNER;
+        }
+    }
+    delay();
 }
 
 int main(){
     //setup
     uart_init();
     io_init();
-    uint8_t i;
 
     //setup
     PORTB &= ~(1<<PB5); //led off
 
+    delay();
+    all_on();
+
     while(1){
-        delay();
-        for(i=0;i<4;i++){
-            if (i==1 || i==2){
-                cube[i] = CUBE_BLUE_CENTER;
-            }
-            else {
-                cube[i] = 0x0000;
-            }
-        }
+        //light each layer
+        bring_up();
 
-        delay();
-        for(i=0;i<4;i++){
-            if (i==0 || i==3){
-                cube[i] = CUBE_BLUE_CORNER;
-            }
-            else {
-                cube[i] = 0x0000;
-            }
-        }
+        //go from center
+        star_burst();
 
+        //show all
+        all_on();
         delay();
-        for(i=0;i<4;i++){
-            if (i==1 || i==2){
-                cube[i] = ~CUBE_BLUE_CENTER;
-            }
-            else {
-                cube[i] = ~CUBE_BLUE_CORNER;
-            }
-        }
 
-        delay();
-        for(i=0;i<4;i++){
-            cube[i] = 0xFFFF;
-        }
+        //green only
+        all_green();
+
     }
 }
