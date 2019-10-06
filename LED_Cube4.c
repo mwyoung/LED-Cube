@@ -48,10 +48,6 @@ int uart_putchar(char c, FILE *stream){
 }
 
 void io_init(void){
-    //built in led
-    DDRB |= (1<<PB5);
-    PORTB |= (1<<PB5);
-
     //serial comm
     DDRD |= (1<<SER_DATA)|(1<<STORE_CLK)|(1<<SHIFT_CLK);
     PORTD &= ~( (1<<SER_DATA)|(1<<STORE_CLK)|(1<<SHIFT_CLK) );
@@ -96,9 +92,9 @@ ISR(TIMER2_COMPA_vect){
     }
 }
 
-void delay(){
+void delay(uint8_t hundred_ms){
     uint8_t i;
-    for(i=0;i<20;i++){_delay_ms(100);}
+    for(i=0;i<hundred_ms;i++){_delay_ms(100);}
 }
 
 void all_on(void){
@@ -120,18 +116,28 @@ void bring_up(void){
     uint8_t i;
     for(i=0;i<4;i++){
         cube[i] = 0xFFFF;
-        delay();
+        delay(8);
     }
 }
 
-void star_burst(void){
+void star(void){
     all_off();
     cube[1] = CUBE_BLUE_CENTER;
     cube[2] = CUBE_BLUE_CENTER;
-    delay();
+    delay(7);
     cube[0] = CUBE_BLUE_CORNER;
     cube[3] = CUBE_BLUE_CORNER;
-    delay();
+    delay(7);
+}
+
+void star_burst(void){
+    star();
+    cube[1] = 0x0000;
+    cube[2] = 0x0000;
+    delay(7);
+    cube[0] = 0x0000;
+    cube[3] = 0x0000;
+    delay(7);
 }
 
 void all_green(void){
@@ -144,19 +150,16 @@ void all_green(void){
             cube[i] = ~CUBE_BLUE_CORNER;
         }
     }
-    delay();
+    delay(10);
 }
 
 int main(){
     //setup
+    DDRB |= (1<<PB5); //built in led
+    PORTB |= (1<<PB5); //led on - starting setup
     uart_init();
     io_init();
-
-    //setup
-    PORTB &= ~(1<<PB5); //led off
-
-    delay();
-    all_on();
+    PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
         //light each layer
@@ -167,7 +170,7 @@ int main(){
 
         //show all
         all_on();
-        delay();
+        delay(10);
 
         //green only
         all_green();
