@@ -23,9 +23,11 @@
 #define BJT3 PC3
 #define ALL_BJT_OFF ~( (1<<BJT0)|(1<<BJT1)|(1<<BJT2)|(1<<BJT3) )
 
-#define CUBE_BLUE_CORNER 0b1001000000001001
-#define CUBE_BLUE_CENTER 0b0000011001100000
-
+#define CUBE_OFF 0x0000
+#define CUBE_ON 0xFFFF
+#define CUBE_CORNER ( (1<<0)|(1<<3)|(1<<12)|(1<<15) )       //0b1001000000001001
+#define CUBE_CENTER ( (1<<5)|(1<<6)|(1<<9)|(1<<10) )       //0b0000011001100000
+#define CUBE_OPPOSITE_CORNER ( (1<<1)|(1<<2)|(1<<4)|(1<<7)|(1<<8)|(1<<11)|(1<<13)|(1<<14) )
 /*      Cube layer
     0   4   8   12
     1   5   9   13
@@ -110,14 +112,14 @@ void delay(uint8_t hundred_ms){
 void all_on(void){
     uint8_t i;
     for(i=0;i<4;i++){
-        cube[i] = 0xFFFF;
+        cube[i] = CUBE_ON;
     }
 }
 
 void all_off(void){
     uint8_t i;
     for(i=0;i<4;i++){
-        cube[i] = 0x0000;
+        cube[i] = CUBE_OFF;
     }
 }
 
@@ -125,41 +127,36 @@ void bring_up(void){
     all_off();
     uint8_t i;
     for(i=0;i<4;i++){
-        cube[i] = 0xFFFF;
+        cube[i] = CUBE_ON;
         delay(8);
     }
 }
 
 void star(void){
     all_off();
-    cube[1] = CUBE_BLUE_CENTER;
-    cube[2] = CUBE_BLUE_CENTER;
+    cube[1] = CUBE_CENTER;
+    cube[2] = CUBE_CENTER;
     delay(7);
-    cube[0] = CUBE_BLUE_CORNER;
-    cube[3] = CUBE_BLUE_CORNER;
+    cube[0] = CUBE_CORNER;
+    cube[3] = CUBE_CORNER;
     delay(7);
 }
 
 void star_burst(void){
     star();
-    cube[1] = 0x0000;
-    cube[2] = 0x0000;
+    cube[1] = CUBE_OFF;
+    cube[2] = CUBE_OFF;
     delay(7);
-    cube[0] = 0x0000;
-    cube[3] = 0x0000;
+    cube[0] = CUBE_OFF;
+    cube[3] = CUBE_OFF;
     delay(7);
 }
 
 void all_green(void){
-    uint8_t i;
-    for(i=0;i<4;i++){
-        if (i==1 || i==2){
-            cube[i] = ~CUBE_BLUE_CENTER;
-        }
-        else {
-            cube[i] = ~CUBE_BLUE_CORNER;
-        }
-    }
+    cube[0] = ~CUBE_CORNER;
+    cube[1] = ~CUBE_CENTER;
+    cube[2] = ~CUBE_CENTER;
+    cube[3] = ~CUBE_CORNER;
     delay(10);
 }
 
@@ -192,6 +189,48 @@ void green_wind_up(void){
     }
 }
 
+void rocket_ship(void){
+    all_off();
+    int8_t i;
+
+    //setup rocket ship
+    cube[1] = CUBE_CENTER;
+    cube[2] = CUBE_CENTER;
+
+    delay(10);
+    //flames
+    cube[0] = CUBE_CENTER;
+    delay(3);
+    cube[0] |= CUBE_OPPOSITE_CORNER;
+    delay(5);
+
+    //liftoff
+    cube[0] = CUBE_CENTER;
+    delay(5);
+    cube[3] = CUBE_CENTER;
+    delay(5);
+    cube[2] = CUBE_OPPOSITE_CORNER | CUBE_CENTER;
+    delay(15);
+
+    //reached outer space
+    cube[2] = CUBE_CENTER;
+    cube[3] = CUBE_OFF;
+    delay(10);
+
+    //slowly blink
+    for(i=10;i>0;i--){
+        if (i%2==0){
+            cube[0] = CUBE_CENTER;
+        }
+        else {
+            cube[0] = CUBE_OFF;
+        }
+        delay(i);
+    }
+
+    delay(10);
+}
+
 int main(){
     //setup
     DDRB |= (1<<PB5); //built in led
@@ -201,7 +240,7 @@ int main(){
     PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
-/*        //light each layer
+        //light each layer
         bring_up();
 
         //go from center
@@ -213,14 +252,16 @@ int main(){
 
         //green only
         all_green();
-*/
+
         //slowly go through each green led
         green_wind_up();
+
+        rocket_ship();
     }
 }
 /*
     if(i==0 || i==3){ //top/bottom
-        while(CUBE_BLUE_CORNER & (1<<j)){ //skip
+        while(CUBE_CORNER & (1<<j)){ //skip
             j++;
         }
         cube[i] |= (1<<j);
