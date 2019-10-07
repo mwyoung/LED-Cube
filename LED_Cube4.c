@@ -26,6 +26,16 @@
 #define CUBE_BLUE_CORNER 0b1001000000001001
 #define CUBE_BLUE_CENTER 0b0000011001100000
 
+/*      Cube layer
+    0   4   8   12
+    1   5   9   13
+    2   6   10  14
+    3   7   11  15
+
+    Layer 0,3 - blue at corners, 0, 3, 12, 15
+    Layer 1,2 - blue at center, 5, 6, 9, 10
+*/
+
 void uart_init(void);
 int uart_putchar(char c, FILE *stream);
 FILE uart_str = FDEV_SETUP_STREAM(uart_putchar, NULL, _FDEV_SETUP_WRITE);
@@ -156,42 +166,30 @@ void all_green(void){
 void green_wind_up(void){
     all_off();
     int8_t i;
+    int8_t j;
+
+    //inefficient, need to do manually due to wiring
+    //bottom layer
+    const uint8_t light_array_lid[] = {5,1,2,6,7,11,10,14,13,9,8,4};
+    for(i=0;i<12;i++){
+        cube[0] |= (1<<light_array_lid[i]);
+        delay(5);
+    }
 
     //inside layers
-    for(i=15;i>=0;i--){
-        while(CUBE_BLUE_CENTER & (1<<i)){ //skip
-            i--;
-        }
-        cube[1] |= (1<<i);
-        delay(5);
-    }
-    for(i=0;i<16;i++){
-        while(CUBE_BLUE_CENTER & (1<<i)){ //skip
-            i++;
-        }
-        cube[2] |= (1<<i);
-        delay(5);
-    }
-    /*
-    for(i=0;i<4;i++){
-        for(j=0;j<16;j++){
-            if(i==0 || i==3){ //top/bottom
-                while(CUBE_BLUE_CORNER & (1<<j)){ //skip
-                    j++;
-                }
-                cube[i] |= (1<<j);
-            }
-            else { //inside
-                while(CUBE_BLUE_CENTER & (1<<j)){ //skip
-                    j++;
-                }
-                cube[i] |= (1<<j);
-            }
-
+    const uint8_t light_array_mid[] = {0,1,2,3,7,11,15,14,13,12,8,4};
+    for(j=1;j<=2;j++){
+        for(i=0;i<12;i++){
+            cube[j] |= (1<<light_array_mid[i]);
             delay(5);
         }
     }
-    */
+
+    //top layer
+    for(i=0;i<12;i++){
+        cube[3] |= (1<<light_array_lid[i]);
+        delay(5);
+    }
 }
 
 int main(){
@@ -220,3 +218,11 @@ int main(){
         green_wind_up();
     }
 }
+/*
+    if(i==0 || i==3){ //top/bottom
+        while(CUBE_BLUE_CORNER & (1<<j)){ //skip
+            j++;
+        }
+        cube[i] |= (1<<j);
+    }
+    */
