@@ -153,6 +153,47 @@ void all_green(void){
     delay(10);
 }
 
+void green_wind_up(void){
+    all_off();
+    int8_t i;
+
+    //inside layers
+    for(i=15;i>=0;i--){
+        while(CUBE_BLUE_CENTER & (1<<i)){ //skip
+            i--;
+        }
+        cube[1] |= (1<<i);
+        delay(5);
+    }
+    for(i=0;i<16;i++){
+        while(CUBE_BLUE_CENTER & (1<<i)){ //skip
+            i++;
+        }
+        cube[2] |= (1<<i);
+        delay(5);
+    }
+    /*
+    for(i=0;i<4;i++){
+        for(j=0;j<16;j++){
+            if(i==0 || i==3){ //top/bottom
+                while(CUBE_BLUE_CORNER & (1<<j)){ //skip
+                    j++;
+                }
+                cube[i] |= (1<<j);
+            }
+            else { //inside
+                while(CUBE_BLUE_CENTER & (1<<j)){ //skip
+                    j++;
+                }
+                cube[i] |= (1<<j);
+            }
+
+            delay(5);
+        }
+    }
+    */
+}
+
 int main(){
     //setup
     DDRB |= (1<<PB5); //built in led
@@ -162,7 +203,7 @@ int main(){
     PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
-        //light each layer
+/*        //light each layer
         bring_up();
 
         //go from center
@@ -174,6 +215,8 @@ int main(){
 
         //green only
         all_green();
-
+*/
+        //slowly go through each green led
+        green_wind_up();
     }
 }
