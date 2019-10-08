@@ -107,7 +107,7 @@ ISR(TIMER2_COMPA_vect){
     }
 }
 
-void delay(uint8_t hundred_ms){
+void delay(const uint8_t hundred_ms){
     uint8_t i;
     for(i=0;i<hundred_ms;i++){_delay_ms(100);}
 }
@@ -200,7 +200,7 @@ void green_snake(void){
     for(i=0;i<SNAKE_LEN;i++){
         cube[0] |= (1<<cubearr_corner[i]);
     }
-    delay(5);
+    delay(10);
 
     for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
         cube[0] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
@@ -208,46 +208,40 @@ void green_snake(void){
         delay(10);
     }
 
-    //next layer
-    for(i=0;i<SNAKE_LEN;i++){
-        cube[0] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-        cube[1] |= (1<<cubearr_center[i]);
-        delay(10);
-    }
+    for(j=1;j<=3;j++){
+        for(i=0;i<SNAKE_LEN;i++){ //inbetween layers
+            if(j==(1-1)||j==(2-1)){
+                cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                if(i==2){
+                    cube[j-1] &= ~(1<<9); //hack, will not turn off???
+                }
+            }
+            else {
+                cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                if(i==2){
+                    cube[j-1] &= ~(1<<12);
+                }
+            }
+            if(j==1||j==2){
+                cube[j] |= (1<<cubearr_center[i]); //set
+            }
+            else {
+                cube[j] |= (1<<cubearr_corner[i]); //set
+            }
+            delay(10);
+        }
 
-
-    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
-        cube[1] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
-        cube[1] |= (1<<cubearr_center[i]);
-        delay(10);
-    }
-
-    //next layer
-    for(i=0;i<SNAKE_LEN;i++){
-        cube[1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-        cube[2] |= (1<<cubearr_center[i]);
-        delay(10);
-    }
-
-
-    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
-        cube[2] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
-        cube[2] |= (1<<cubearr_center[i]);
-        delay(10);
-    }
-
-    //next layer
-    for(i=0;i<SNAKE_LEN;i++){
-        cube[2] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-        cube[3] |= (1<<cubearr_corner[i]);
-        delay(10);
-    }
-
-
-    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
-        cube[3] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
-        cube[3] |= (1<<cubearr_corner[i]);
-        delay(10);
+        for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){ //single layer
+            if(j==1||j==2){
+                cube[j] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
+                cube[j] |= (1<<cubearr_center[i]); //set
+            }
+            else {
+                cube[j] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
+                cube[j] |= (1<<cubearr_corner[i]); //set
+            }
+            delay(10);
+        }
     }
 
     delay(10);
@@ -311,7 +305,7 @@ int main(){
     PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
-  /*      //light each layer
+        //light each layer
         bring_up();
 
         //go from center
@@ -326,19 +320,11 @@ int main(){
 
         //slowly go through each green led
         green_wind_up();
-*/
+
         //a 6 pixel snake
         green_snake();
 
         //blue is a ship, green is firing/shields
-//        rocket_ship();
+        rocket_ship();
     }
 }
-/*
-    if(i==0 || i==3){ //top/bottom
-        while(CUBE_CORNER & (1<<j)){ //skip
-            j++;
-        }
-        cube[i] |= (1<<j);
-    }
-    */
