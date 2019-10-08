@@ -45,6 +45,9 @@ void io_init(void);
 
 volatile uint16_t cube[4] = {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF};
 volatile uint8_t layer = 0; //current cube layer
+const uint8_t cubearr_corner[] = {5,1,2,6,7,11,10,14,13,9,8,4};
+const uint8_t cubearr_center[] = {0,1,2,3,7,11,15,14,13,12,8,4};
+#define CUBEARR_VAL 12 //has 12 values
 
 void uart_init(void){
     UCSR0B |= (1<<RXEN0)|(1<<TXEN0); //turn on tx/rx
@@ -167,26 +170,94 @@ void green_wind_up(void){
 
     //inefficient, need to do manually due to wiring
     //bottom layer
-    const uint8_t light_array_lid[] = {5,1,2,6,7,11,10,14,13,9,8,4};
-    for(i=0;i<12;i++){
-        cube[0] |= (1<<light_array_lid[i]);
+    for(i=0;i<CUBEARR_VAL;i++){
+        cube[0] |= (1<<cubearr_corner[i]);
         delay(5);
     }
 
     //inside layers
-    const uint8_t light_array_mid[] = {0,1,2,3,7,11,15,14,13,12,8,4};
     for(j=1;j<=2;j++){
-        for(i=0;i<12;i++){
-            cube[j] |= (1<<light_array_mid[i]);
+        for(i=0;i<CUBEARR_VAL;i++){
+            cube[j] |= (1<<cubearr_center[i]);
             delay(5);
         }
     }
 
     //top layer
-    for(i=0;i<12;i++){
-        cube[3] |= (1<<light_array_lid[i]);
+    for(i=0;i<CUBEARR_VAL;i++){
+        cube[3] |= (1<<cubearr_corner[i]);
         delay(5);
     }
+}
+
+void green_snake(void){
+    all_off();
+    int8_t i;
+    int8_t j;
+#define SNAKE_LEN 5
+
+    //setup initial snake
+    for(i=0;i<SNAKE_LEN;i++){
+        cube[0] |= (1<<cubearr_corner[i]);
+    }
+    delay(5);
+
+    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
+        cube[0] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
+        cube[0] |= (1<<cubearr_corner[i]);
+        delay(10);
+    }
+
+    //next layer
+    for(i=0;i<SNAKE_LEN;i++){
+        cube[0] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+        cube[1] |= (1<<cubearr_center[i]);
+        delay(10);
+    }
+
+
+    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
+        cube[1] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
+        cube[1] |= (1<<cubearr_center[i]);
+        delay(10);
+    }
+
+    //next layer
+    for(i=0;i<SNAKE_LEN;i++){
+        cube[1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+        cube[2] |= (1<<cubearr_center[i]);
+        delay(10);
+    }
+
+
+    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
+        cube[2] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
+        cube[2] |= (1<<cubearr_center[i]);
+        delay(10);
+    }
+
+    //next layer
+    for(i=0;i<SNAKE_LEN;i++){
+        cube[2] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+        cube[3] |= (1<<cubearr_corner[i]);
+        delay(10);
+    }
+
+
+    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
+        cube[3] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
+        cube[3] |= (1<<cubearr_corner[i]);
+        delay(10);
+    }
+
+    delay(10);
+
+    cube[3] = CUBE_CENTER;
+
+    delay(10);
+
+    all_green();
+
 }
 
 void rocket_ship(void){
@@ -240,7 +311,7 @@ int main(){
     PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
-        //light each layer
+  /*      //light each layer
         bring_up();
 
         //go from center
@@ -255,8 +326,12 @@ int main(){
 
         //slowly go through each green led
         green_wind_up();
+*/
+        //a 6 pixel snake
+        green_snake();
 
-        rocket_ship();
+        //blue is a ship, green is firing/shields
+//        rocket_ship();
     }
 }
 /*
