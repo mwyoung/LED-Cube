@@ -9,7 +9,7 @@
 #endif
 
 void delay(const uint8_t hundred_ms);
-
+void rotate_layers(void);
 void all_on(void);
 void all_off(void);
 void bring_up(void);
@@ -20,4 +20,4 @@ void green_wind_up(void);
 void blue_wind_up(void);
 void green_snake(void);
 void rocket_ship(void);
-void rain(void);
+void rain(const uint8_t drops);

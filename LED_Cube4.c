@@ -129,5 +129,8 @@ int main(){
 
         //blue is a ship, green is firing/shields
         rocket_ship();
+
+        //rain - pseudo random
+        rain(16);
     }
 }

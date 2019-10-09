@@ -1,8 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/interrupt.h>
 #include <stdio.h>
-#include <stdbool.h> //wastes variables...
+#include <stdlib.h> //for rand
 
 #ifndef LED_DEFAULTS_H
     #include "LED_Defaults.h"
@@ -11,6 +10,14 @@
 void delay(const uint8_t hundred_ms){
     uint8_t i;
     for(i=0;i<hundred_ms;i++){_delay_ms(100);}
+}
+
+void rotate_layers(void){
+    int8_t i;
+    for(i=0;i<3;i++){
+        cube[i] = cube[i+1];
+    }
+    cube[3] = 0x0000;
 }
 
 void all_on(void){
@@ -215,9 +222,25 @@ void rocket_ship(void){
     delay(10);
 }
 
-void rain(void){
+void rain(const uint8_t drops){
     all_off();
-//    int8_t i;
+    int8_t i;
+    int8_t j;
+    int8_t rand_cube; //random number for the cube
+    int8_t rand_cube_drop; //random number of drop
 
-    //
+    for(i=0;i<drops;i++){
+        rotate_layers();
+
+        rand_cube = rand() & 3; //bit mask to 3, max number of drops
+        if (rand_cube == 0){
+            rand_cube++;
+        }
+        for (j=0;j<rand_cube;j++){
+            rand_cube_drop = rand() & 15;
+            cube[3] |= (1<<rand_cube_drop);
+        }
+
+        delay(10);
+    }
 }
