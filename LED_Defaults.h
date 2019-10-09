@@ -10,6 +10,7 @@
 
     #define CUBE_OFF 0x0000
     #define CUBE_ON 0xFFFF
+    #define CUBE_LEDS 16
     #define CUBE_CORNER ( (1<<0)|(1<<3)|(1<<12)|(1<<15) )       //0b1001000000001001
     #define CUBE_CENTER ( (1<<5)|(1<<6)|(1<<9)|(1<<10) )       //0b0000011001100000
     #define CUBE_OPPOSITE_CORNER ( (1<<1)|(1<<2)|(1<<4)|(1<<7)|(1<<8)|(1<<11)|(1<<13)|(1<<14) )
@@ -25,7 +26,7 @@
 
     volatile uint16_t cube[4] = {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF};
     volatile uint8_t layer = 0; //current cube layer
-    const uint8_t cubearr_corner[] = {5,1,2,6,7,11,10,14,13,9,8,4};
-    const uint8_t cubearr_center[] = {0,1,2,3,7,11,15,14,13,12,8,4};
-#define CUBEARR_VAL 12 //has 12 values
+    const uint8_t cubearr_corner[] = {4,5,1,2,6,7,11,10,14,13,9,8};
+    const uint8_t cubearr_center[] = {4,0,1,2,3,7,11,15,14,13,12,8};
+    #define CUBEARR_VAL 12 //has 12 values
 #endif

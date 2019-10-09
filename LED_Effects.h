@@ -17,6 +17,7 @@ void star(void);
 void star_burst(void);
 void all_green(void);
 void green_wind_up(void);
+void blue_wind_up(void);
 void green_snake(void);
 void rocket_ship(void);
 //random rain drops?

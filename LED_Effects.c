@@ -77,9 +77,9 @@ void green_wind_up(void){
     }
 
     //inside layers
-    for(j=1;j<=2;j++){
-        for(i=0;i<CUBEARR_VAL;i++){
-            cube[j] |= (1<<cubearr_center[i]);
+    for(i=1;i<=2;i++){
+        for(j=0;j<CUBEARR_VAL;j++){
+            cube[i] |= (1<<cubearr_center[j]);
             delay(5);
         }
     }
@@ -88,6 +88,30 @@ void green_wind_up(void){
     for(i=0;i<CUBEARR_VAL;i++){
         cube[3] |= (1<<cubearr_corner[i]);
         delay(5);
+    }
+}
+
+void blue_wind_up(void){
+    all_off();
+    int8_t i;
+    int8_t j;
+
+    for(i=0;i<4;i++){
+        for(j=0;j<CUBE_LEDS;j++){
+            if(i==0||i==3){
+                while((~CUBE_CORNER & (1<<j)) && (j<CUBE_LEDS)){
+                    j++;
+                }
+                cube[i] |= (1<<j); //skip
+            }
+            else {
+                while((~CUBE_CENTER & (1<<j)) && (j<CUBE_LEDS)){
+                    j++; //skip
+                }
+                cube[i] |= (1<<j);
+            }
+        }
+        delay(10);
     }
 }
 
@@ -198,3 +222,4 @@ void rocket_ship(void){
 }
 
 //random rain drops?
+
