@@ -122,7 +122,7 @@ int main(){
         green_wind_up();
 
         //slowly go through each blue led
-       blue_wind_up();
+        blue_wind_up();
 
         //a 6 pixel snake
         green_snake();

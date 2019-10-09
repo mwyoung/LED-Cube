@@ -135,19 +135,13 @@ void green_snake(void){
 
     for(j=1;j<=3;j++){
         for(i=0;i<SNAKE_LEN;i++){ //inbetween layers
-            if(j==(1-1)||j==(2-1)){
-                cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-                if(i==2){
-                    cube[j-1] &= ~(1<<9); //hack, will not turn off???
-                }
+            if((j-1)==1){
+                cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
             }
             else {
-                cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-                if(i==2){
-                    cube[j-1] &= ~(1<<12);
-                }
+                cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
             }
-            if(j==1||j==2){
+            if(j!=3){
                 cube[j] |= (1<<cubearr_center[i]); //set
             }
             else {
@@ -190,7 +184,7 @@ void rocket_ship(void){
     delay(10);
     //flames
     cube[0] = CUBE_CENTER;
-    delay(3);
+    delay(10);
     cube[0] |= CUBE_OPPOSITE_CORNER;
     delay(5);
 
@@ -221,5 +215,9 @@ void rocket_ship(void){
     delay(10);
 }
 
-//random rain drops?
+void rain(void){
+    all_off();
+//    int8_t i;
 
+    //
+}
