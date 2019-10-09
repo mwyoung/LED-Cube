@@ -24,8 +24,7 @@ CC			= avr-gcc
 OBJCOPY		= avr-objcopy
 OBJDUMP		= avr-objdump
 
-.PHONY: all clean
-all: $(SRC).elf lst text
+default: compile
 
 %.hex: %.obj
 	avr-objcopy -R .eeprom -O ihex $< $@
@@ -53,6 +52,7 @@ serialcomm:
 $(BUILD_DIR):
 	-mkdir -p $(BUILD_DIR)
 
+.PHONY: clean
 clean:
 	-rm -f *.o *.hex *.obj *.d *.map $(BUILD_DIR)/*
 
