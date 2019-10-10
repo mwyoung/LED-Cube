@@ -1,8 +1,8 @@
 # LED Cube - 4x4x4
 
 The purpose of this project is to make a LED cube using a minimum amount of pins from the
-microcontroller. An Arduino Nano (clone, to use the Atmega328p chip) is used for the
-microcontroller, and a USBASP is used for programming. An example serial test program is
+microcontroller. An Arduino Nano (clone) used for the Atmega328p chip as the microcontroller,
+ and a USBASP is used for programming. An example serial test program is
 available [here](https://github.com/mwyoung/avr-serial-test).
 
 The main code starts in LED\_Cube4.c. The LED\_Defaults.h file contains macros and
