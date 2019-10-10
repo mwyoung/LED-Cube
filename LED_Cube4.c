@@ -134,6 +134,6 @@ int main(){
         rain(16);
 
         //moving diagonal
-        moving_diagonal(16);
+        moving_diagonal(8);
     }
 }

@@ -154,7 +154,7 @@ void green_snake(void){
             else {
                 cube[j] |= (1<<cubearr_corner[i]); //set
             }
-            delay(10);
+            delay(7);
         }
 
         for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){ //single layer
@@ -166,7 +166,7 @@ void green_snake(void){
                 cube[j] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
                 cube[j] |= (1<<cubearr_corner[i]); //set
             }
-            delay(10);
+            delay(7);
         }
     }
 
@@ -191,9 +191,9 @@ void rocket_ship(void){
     delay(10);
     //flames
     cube[0] = CUBE_CENTER;
-    delay(10);
+    delay(15);
     cube[0] |= CUBE_OPPOSITE_CORNER;
-    delay(5);
+    delay(10);
 
     //liftoff
     cube[0] = CUBE_CENTER;
@@ -257,11 +257,19 @@ void moving_diagonal(const uint8_t times){
     cube[3] = 0XF000;
     delay(10);
 
-    for(i=0;i<times;i++){
+    for(i=0;i<times*2;i++){
         for(j=0;j<4;j++){
-            cube[j] = cube[j] << 4;
-            if (cube[j] == 0){
-                cube[j] = 0x000F;
+            if (i < times){
+                cube[j] = cube[j] << 4;
+                if (cube[j] == 0){
+                    cube[j] = 0x000F;
+                }
+            }
+            else {
+                cube[j] = cube[j] >> 4;
+                if (cube[j] == 0){
+                    cube[j] = 0xF000;
+                }
             }
         }
         delay(10);
