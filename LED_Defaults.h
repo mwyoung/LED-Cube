@@ -29,5 +29,6 @@
     volatile uint8_t layer = 0; //current cube layer
     const uint8_t cubearr_corner[] = {4,5,1,2,6,7,11,10,14,13,9,8};
     const uint8_t cubearr_center[] = {4,0,1,2,3,7,11,15,14,13,12,8};
+    const uint8_t cubearr_inside_center[]= {5,6,10,9};
     #define CUBEARR_VAL 12 //has 12 values
 #endif

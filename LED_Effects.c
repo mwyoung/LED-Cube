@@ -278,7 +278,7 @@ void tower(void){
     int8_t j;
 
     //going up
-    for(i=0;i<=3;i++){
+    for(i=0;i<4;i++){
         cube[i] = CUBE_CENTER;
         delay(7);
 
@@ -296,5 +296,56 @@ void tower(void){
 
         cube[i] &= ~CUBE_CENTER;
         delay(7);
+    }
+}
+
+void pie_chart(void){
+    all_off();
+    int8_t i;
+    int8_t j;
+    int8_t corner;
+
+    //go on outside, get each corner
+    for(i=0;i<CUBEARR_VAL;i++){
+        //inside corner
+        if((i%3)==0){ //at each end
+            corner = i / 3;
+            for(j=0;j<4;j++){
+                cube[j] |= (1<<cubearr_inside_center[corner]); //set
+            }
+        }
+        //outside
+        for(j=0;j<4;j++){
+            cube[j] |= (1<<cubearr_center[i]); //set
+        }
+
+        delay(5);
+    }
+}
+
+void clock(void){
+    all_off();
+    int8_t i;
+    int8_t j;
+    int8_t corner;
+
+    //go on outside, get each corner
+    for(i=(CUBEARR_VAL-1);i>=0;i--){
+        //inside corner
+        if((i%3)==2){ //at each end
+            corner = i / 3;
+            for(j=0;j<4;j++){
+                cube[j] = (1<<cubearr_inside_center[corner]); //set, delete other value
+            }
+        }
+        //outside
+        for(j=0;j<4;j++){
+            if(i<(CUBEARR_VAL-1)){ //do not do on first cycle
+                cube[j] &= ~(1<<cubearr_center[i+1]); //remove previous
+            }
+            cube[j] |= (1<<cubearr_center[i]); //set
+        }
+
+        delay(5);
     }
 }

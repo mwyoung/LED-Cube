@@ -140,6 +140,12 @@ int main(){
         //lightup tower
         tower();
 
+        //pie chart
+        pie_chart();
+
+        //analog clock
+        clock();
+
         //end
     }
 }
