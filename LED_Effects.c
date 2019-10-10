@@ -132,29 +132,25 @@ void green_snake(void){
     for(i=0;i<SNAKE_LEN;i++){
         cube[0] |= (1<<cubearr_corner[i]);
     }
-    delay(10);
+    delay(7);
 
-    for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){
-        cube[0] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
-        cube[0] |= (1<<cubearr_corner[i]);
-        delay(10);
-    }
-
-    for(j=1;j<=3;j++){
-        for(i=0;i<SNAKE_LEN;i++){ //inbetween layers
-            if((j-1)==1){
-                cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+    for(j=0;j<=3;j++){
+        if(j!= 0){ //don't do initial for moving on ground
+            for(i=0;i<SNAKE_LEN;i++){ //inbetween layers
+                if((j-1)>=1){
+                    cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                }
+                else {
+                    cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                }
+                if(j!=3){
+                    cube[j] |= (1<<cubearr_center[i]); //set
+                }
+                else {
+                    cube[j] |= (1<<cubearr_corner[i]); //set
+                }
+                delay(7);
             }
-            else {
-                cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
-            }
-            if(j!=3){
-                cube[j] |= (1<<cubearr_center[i]); //set
-            }
-            else {
-                cube[j] |= (1<<cubearr_corner[i]); //set
-            }
-            delay(7);
         }
 
         for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){ //single layer
@@ -241,7 +237,7 @@ void rain(const uint8_t drops){
             cube[3] |= (1<<rand_cube_drop);
         }
 
-        delay(10);
+        delay(5);
     }
 }
 

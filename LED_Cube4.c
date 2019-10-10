@@ -105,6 +105,7 @@ int main(){
     PORTB &= ~(1<<PB5); //led off - setup done
 
     while(1){
+
         //light each layer
         bring_up();
 
@@ -131,9 +132,11 @@ int main(){
         rocket_ship();
 
         //rain - pseudo random
-        rain(16);
+        rain(32);
 
         //moving diagonal
         moving_diagonal(8);
+
+        //end
     }
 }
