@@ -12,6 +12,7 @@ void delay(const uint8_t hundred_ms){
     for(i=0;i<hundred_ms;i++){_delay_ms(100);}
 }
 
+//pushes layers down
 void rotate_layers(void){
     int8_t i;
     for(i=0;i<3;i++){
@@ -20,6 +21,7 @@ void rotate_layers(void){
     cube[3] = 0x0000;
 }
 
+//turns all layers on
 void all_on(void){
     uint8_t i;
     for(i=0;i<4;i++){
@@ -27,6 +29,7 @@ void all_on(void){
     }
 }
 
+//turns all layers off
 void all_off(void){
     uint8_t i;
     for(i=0;i<4;i++){
@@ -34,15 +37,17 @@ void all_off(void){
     }
 }
 
+//slowly light each layer up, goes from 0 to 3
 void bring_up(void){
     all_off();
     uint8_t i;
     for(i=0;i<4;i++){
         cube[i] = CUBE_ON;
-        delay(8);
+        delay(7);
     }
 }
 
+//turns middle cube on first, then outer corners
 void star(void){
     all_off();
     cube[1] = CUBE_CENTER;
@@ -53,6 +58,7 @@ void star(void){
     delay(7);
 }
 
+//does a star, then turns the middle to outer off
 void star_burst(void){
     star();
     cube[1] = CUBE_OFF;
@@ -63,6 +69,7 @@ void star_burst(void){
     delay(7);
 }
 
+//only turns on green LEDs (no corner or middle)
 void all_green(void){
     cube[0] = ~CUBE_CORNER;
     cube[1] = ~CUBE_CENTER;
@@ -71,33 +78,26 @@ void all_green(void){
     delay(10);
 }
 
+//slowly turns on each led from an array in a sequence
 void green_wind_up(void){
     all_off();
     int8_t i;
     int8_t j;
 
-    //inefficient, need to do manually due to wiring
-    //bottom layer
-    for(i=0;i<CUBEARR_VAL;i++){
-        cube[0] |= (1<<cubearr_corner[i]);
-        delay(5);
-    }
-
-    //inside layers
-    for(i=1;i<=2;i++){
+    for(i=0;i<4;i++){
         for(j=0;j<CUBEARR_VAL;j++){
-            cube[i] |= (1<<cubearr_center[j]);
+            if (i==1||i==2){ //inside layers
+                cube[i] |= (1<<cubearr_center[j]);
+            }
+            else { //top/bottom
+                cube[i] |= (1<<cubearr_corner[j]);
+            }
             delay(5);
         }
     }
-
-    //top layer
-    for(i=0;i<CUBEARR_VAL;i++){
-        cube[3] |= (1<<cubearr_corner[i]);
-        delay(5);
-    }
 }
 
+//turns on each blue LED from each corner, is an example of using while
 void blue_wind_up(void){
     all_off();
     int8_t i;
@@ -122,6 +122,7 @@ void blue_wind_up(void){
     }
 }
 
+//uses a length to slowly go up each level, turns off pixels behind
 void green_snake(void){
     all_off();
     int8_t i;
@@ -176,6 +177,11 @@ void green_snake(void){
 
 }
 
+//uses center cube as body of spacecraft
+//      g   g       //shieldling
+//  g   b   b   g
+//      b   b       //blue spaceship
+//  g   g   g   g   //rocket fire
 void rocket_ship(void){
     all_off();
     int8_t i;
@@ -218,6 +224,7 @@ void rocket_ship(void){
     delay(10);
 }
 
+//1-4 random rain drops, falls down
 void rain(const uint8_t drops){
     all_off();
     int8_t i;
@@ -241,6 +248,7 @@ void rain(const uint8_t drops){
     }
 }
 
+//moves a line diagonal, constantly rotates
 void moving_diagonal(const uint8_t times){
     all_off();
     int8_t i;
@@ -272,6 +280,7 @@ void moving_diagonal(const uint8_t times){
     }
 }
 
+//lights up the center, and then goes around; then reverses the process
 void tower(void){
     all_off();
     int8_t i;
@@ -299,6 +308,7 @@ void tower(void){
     }
 }
 
+//slowly lights up a circle, counter-clockwise, copies each layer
 void pie_chart(void){
     all_off();
     int8_t i;
@@ -323,6 +333,7 @@ void pie_chart(void){
     }
 }
 
+//lights up in a clock orientation, copies each layer
 void clock(void){
     all_off();
     int8_t i;
