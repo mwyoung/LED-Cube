@@ -244,3 +244,26 @@ void rain(const uint8_t drops){
         delay(10);
     }
 }
+
+void moving_diagonal(const uint8_t times){
+    all_off();
+    int8_t i;
+    int8_t j;
+
+    //setup
+    cube[0] = 0x000F;
+    cube[1] = 0x00F0;
+    cube[2] = 0x0F00;
+    cube[3] = 0XF000;
+    delay(10);
+
+    for(i=0;i<times;i++){
+        for(j=0;j<4;j++){
+            cube[j] = cube[j] << 4;
+            if (cube[j] == 0){
+                cube[j] = 0x000F;
+            }
+        }
+        delay(10);
+    }
+}

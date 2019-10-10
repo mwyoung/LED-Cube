@@ -132,5 +132,8 @@ int main(){
 
         //rain - pseudo random
         rain(16);
+
+        //moving diagonal
+        moving_diagonal(16);
     }
 }
