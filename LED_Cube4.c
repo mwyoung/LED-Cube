@@ -137,6 +137,9 @@ int main(){
         //moving diagonal
         moving_diagonal(8);
 
+        //lightup tower
+        tower();
+
         //end
     }
 }

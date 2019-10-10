@@ -271,3 +271,30 @@ void moving_diagonal(const uint8_t times){
         delay(10);
     }
 }
+
+void tower(void){
+    all_off();
+    int8_t i;
+    int8_t j;
+
+    //going up
+    for(i=0;i<=3;i++){
+        cube[i] = CUBE_CENTER;
+        delay(7);
+
+        for(j=0;j<CUBEARR_VAL;j++){
+            cube[i] |= (1<<cubearr_center[j]); //set
+            delay(7);
+        }
+    }
+    //going down
+    for(i=3;i>=0;i--){
+        for(j=(CUBEARR_VAL-1);j>=0;j--){
+            cube[i] &= ~(1<<cubearr_center[j]); //set
+            delay(7);
+        }
+
+        cube[i] &= ~CUBE_CENTER;
+        delay(7);
+    }
+}

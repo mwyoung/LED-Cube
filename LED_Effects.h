@@ -22,3 +22,4 @@ void green_snake(void);
 void rocket_ship(void);
 void rain(const uint8_t drops);
 void moving_diagonal(const uint8_t times);
+void tower(void);
