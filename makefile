@@ -23,11 +23,12 @@ LDFLAGS += $(PRINTF_LIB) $(MATH_LIB)
 CC			= avr-gcc
 OBJCOPY		= avr-objcopy
 OBJDUMP		= avr-objdump
+OBJSIZE		= avr-size
 
 default: compile
 
 %.hex: %.obj
-	avr-objcopy -R .eeprom -O ihex $< $@
+	$(OBJCOPY) -R .eeprom -O ihex $< $@
 
 $(BUILD_DIR)/%.obj: $(OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)

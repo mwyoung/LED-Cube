@@ -1,3 +1,5 @@
+//#include <avr/pgmspace.h>
+
 #ifndef LED_DEFAULTS_H
     #define LED_DEFAULTS_H
     #define BJT_DDR DDRC
@@ -27,8 +29,11 @@
 
     volatile uint16_t cube[CUBE_LAYERS] = {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF};
     volatile uint8_t layer = 0; //current cube layer
-    const uint8_t cubearr_corner[] = {4,5,1,2,6,7,11,10,14,13,9,8};
-    const uint8_t cubearr_center[] = {4,0,1,2,3,7,11,15,14,13,12,8};
-    const uint8_t cubearr_inside_center[]= {5,6,10,9};
+    const uint16_t cubearr_corner[] =
+        {1<<4,1<<5,1<<1,1<<2,1<<6,1<<7,1<<11,1<<10,1<<14,1<<13,1<<9,1<<8};
+    const uint16_t cubearr_center[] =
+        {1<<4,1<<0,1<<1,1<<2,1<<3,1<<7,1<<11,1<<15,1<<14,1<<13,1<<12,1<<8};
+    const uint16_t cubearr_inside_center[]=
+        {1<<5,1<<6,1<<10,1<<9};
     #define CUBEARR_VAL 12 //has 12 values
 #endif

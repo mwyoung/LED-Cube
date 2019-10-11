@@ -87,10 +87,10 @@ void green_wind_up(void){
     for(i=0;i<4;i++){
         for(j=0;j<CUBEARR_VAL;j++){
             if (i==1||i==2){ //inside layers
-                cube[i] |= (1<<cubearr_center[j]);
+                cube[i] |= cubearr_center[j];
             }
             else { //top/bottom
-                cube[i] |= (1<<cubearr_corner[j]);
+                cube[i] |= cubearr_corner[j];
             }
             delay(5);
         }
@@ -131,7 +131,7 @@ void green_snake(void){
 
     //setup initial snake
     for(i=0;i<SNAKE_LEN;i++){
-        cube[0] |= (1<<cubearr_corner[i]);
+        cube[0] |= cubearr_corner[i];
     }
     delay(7);
 
@@ -139,16 +139,16 @@ void green_snake(void){
         if(j!= 0){ //don't do initial for moving on ground
             for(i=0;i<SNAKE_LEN;i++){ //inbetween layers
                 if((j-1)>=1){
-                    cube[j-1] &= ~(1<<cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                    cube[j-1] &= ~cubearr_center[(CUBEARR_VAL-SNAKE_LEN)+i]; //remove
                 }
                 else {
-                    cube[j-1] &= ~(1<<cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]); //remove
+                    cube[j-1] &= ~cubearr_corner[(CUBEARR_VAL-SNAKE_LEN)+i]; //remove
                 }
                 if(j!=3){
-                    cube[j] |= (1<<cubearr_center[i]); //set
+                    cube[j] |= cubearr_center[i]; //set
                 }
                 else {
-                    cube[j] |= (1<<cubearr_corner[i]); //set
+                    cube[j] |= cubearr_corner[i]; //set
                 }
                 delay(7);
             }
@@ -156,12 +156,12 @@ void green_snake(void){
 
         for(i=SNAKE_LEN;i<CUBEARR_VAL;i++){ //single layer
             if(j==1||j==2){
-                cube[j] &= ~(1<<cubearr_center[i-SNAKE_LEN]); //remove
-                cube[j] |= (1<<cubearr_center[i]); //set
+                cube[j] &= ~cubearr_center[i-SNAKE_LEN]; //remove
+                cube[j] |= cubearr_center[i]; //set
             }
             else {
-                cube[j] &= ~(1<<cubearr_corner[i-SNAKE_LEN]); //remove
-                cube[j] |= (1<<cubearr_corner[i]); //set
+                cube[j] &= ~cubearr_corner[i-SNAKE_LEN]; //remove
+                cube[j] |= cubearr_corner[i]; //set
             }
             delay(7);
         }
@@ -244,7 +244,7 @@ void rain(const uint8_t drops){
             cube[3] |= (1<<rand_cube_drop);
         }
 
-        delay(5);
+        delay(7);
     }
 }
 
@@ -292,14 +292,14 @@ void tower(void){
         delay(7);
 
         for(j=0;j<CUBEARR_VAL;j++){
-            cube[i] |= (1<<cubearr_center[j]); //set
+            cube[i] |= cubearr_center[j]; //set
             delay(7);
         }
     }
     //going down
     for(i=3;i>=0;i--){
         for(j=(CUBEARR_VAL-1);j>=0;j--){
-            cube[i] &= ~(1<<cubearr_center[j]); //set
+            cube[i] &= ~cubearr_center[j]; //set
             delay(7);
         }
 
@@ -321,12 +321,12 @@ void pie_chart(void){
         if((i%3)==0){ //at each end
             corner = i / 3;
             for(j=0;j<4;j++){
-                cube[j] |= (1<<cubearr_inside_center[corner]); //set
+                cube[j] |= cubearr_inside_center[corner]; //set
             }
         }
         //outside
         for(j=0;j<4;j++){
-            cube[j] |= (1<<cubearr_center[i]); //set
+            cube[j] |= cubearr_center[i]; //set
         }
 
         delay(5);
@@ -346,15 +346,15 @@ void clock(void){
         if((i%3)==2){ //at each end
             corner = i / 3;
             for(j=0;j<4;j++){
-                cube[j] = (1<<cubearr_inside_center[corner]); //set, delete other value
+                cube[j] = cubearr_inside_center[corner]; //set, delete other value
             }
         }
         //outside
         for(j=0;j<4;j++){
             if(i<(CUBEARR_VAL-1)){ //do not do on first cycle
-                cube[j] &= ~(1<<cubearr_center[i+1]); //remove previous
+                cube[j] &= ~cubearr_center[i+1]; //remove previous
             }
-            cube[j] |= (1<<cubearr_center[i]); //set
+            cube[j] |= cubearr_center[i]; //set
         }
 
         delay(5);

@@ -3,6 +3,9 @@
 *.o
 *.obj
 *.d
+*.map
+*.elf
+*.d
 *.pdf
 *.png
 tags
