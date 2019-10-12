@@ -118,7 +118,7 @@ void blue_wind_up(void){
                 cube[i] |= (1<<j);
             }
         }
-        delay(10);
+        delay(7);
     }
 }
 
@@ -235,7 +235,7 @@ void rain(const uint8_t drops){
     for(i=0;i<drops;i++){
         rotate_layers();
 
-        rand_cube = rand() & 3; //bit mask to 3, max number of drops
+        rand_cube = rand() & ((1<<2)|(1<<1)|(1<<0)); //bit mask to 0b111, max number of drops
         if (rand_cube == 0){
             rand_cube++;
         }
@@ -261,7 +261,7 @@ void moving_diagonal(const uint8_t times){
     cube[3] = 0XF000;
     delay(10);
 
-    for(i=0;i<times*2;i++){
+    for(i=0;i<times;i++){
         for(j=0;j<4;j++){
             if (i < times){
                 cube[j] = cube[j] << 4;

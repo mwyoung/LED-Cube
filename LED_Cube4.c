@@ -132,10 +132,10 @@ int main(){
         rocket_ship();
 
         //rain - pseudo random
-        rain(32);
+        rain(64);
 
         //moving diagonal
-        moving_diagonal(8);
+        moving_diagonal(16);
 
         //lightup tower
         tower();
