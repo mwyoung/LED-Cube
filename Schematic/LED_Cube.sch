@@ -22,6 +22,7 @@ F 0 "A1" H 1300 2925 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" V 1600 1875 50  0000 C CNN
 F 2 "Module:Arduino_Nano" H 1775 1025 50  0001 L CNN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 1625 975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B0713XK923/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    1625 1975
 	-1   0    0    -1  
 $EndComp
@@ -84,6 +85,7 @@ F 0 "D2" H 3675 3500 50  0000 C CNN
 F 1 "LED" H 3525 3500 50  0000 C CNN
 F 2 "" H 3625 3625 50  0001 C CNN
 F 3 "~" H 3625 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3625 3625
 	0    -1   -1   0   
 $EndComp
@@ -95,6 +97,7 @@ F 0 "D1" H 3275 3500 50  0000 C CNN
 F 1 "LED" H 3125 3500 50  0000 C CNN
 F 2 "" H 3225 3625 50  0001 C CNN
 F 3 "~" H 3225 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3225 3625
 	0    -1   -1   0   
 $EndComp
@@ -106,6 +109,7 @@ F 0 "U2" H 8325 2675 50  0000 C CNN
 F 1 "74HC595" H 8500 1775 50  0000 C CNN
 F 2 "" H 8525 2125 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 8525 2125 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HFWB9L9/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8525 2125
 	0    -1   1    0   
 $EndComp
@@ -150,6 +154,7 @@ F 0 "C2" V 7600 2200 50  0000 L CNN
 F 1 "0.1uF" V 7825 2150 50  0000 L CNN
 F 2 "" H 7725 2250 50  0001 C CNN
 F 3 "~" H 7725 2250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B071CQDWNY/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7725 2250
 	1    0    0    1   
 $EndComp
@@ -168,6 +173,7 @@ F 0 "R2" H 7857 1579 50  0000 R CNN
 F 1 "1k" H 7857 1670 50  0000 R CNN
 F 2 "" V 7965 1615 50  0001 C CNN
 F 3 "~" H 7925 1625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7925 1625
 	0    1    -1   0   
 $EndComp
@@ -193,6 +199,7 @@ F 0 "R18" V 5225 2925 50  0000 C CNN
 F 1 "1k" V 5225 3075 50  0000 C CNN
 F 2 "" V 5365 2990 50  0001 C CNN
 F 3 "~" H 5325 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5325 3000
 	-1   0    0    1   
 $EndComp
@@ -204,6 +211,7 @@ F 0 "R17" V 5000 2925 50  0000 C CNN
 F 1 "1k" V 5000 3075 50  0000 C CNN
 F 2 "" V 5140 2990 50  0001 C CNN
 F 3 "~" H 5100 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5100 3000
 	-1   0    0    1   
 $EndComp
@@ -215,6 +223,7 @@ F 0 "R16" V 4775 2925 50  0000 C CNN
 F 1 "1k" V 4775 3075 50  0000 C CNN
 F 2 "" V 4915 2990 50  0001 C CNN
 F 3 "~" H 4875 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4875 3000
 	-1   0    0    1   
 $EndComp
@@ -226,6 +235,7 @@ F 0 "R15" V 4550 2925 50  0000 C CNN
 F 1 "1k" V 4550 3075 50  0000 C CNN
 F 2 "" V 4690 2990 50  0001 C CNN
 F 3 "~" H 4650 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4650 3000
 	-1   0    0    1   
 $EndComp
@@ -237,6 +247,7 @@ F 0 "R14" V 4325 2925 50  0000 C CNN
 F 1 "1k" V 4325 3075 50  0000 C CNN
 F 2 "" V 4465 2990 50  0001 C CNN
 F 3 "~" H 4425 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4425 3000
 	-1   0    0    1   
 $EndComp
@@ -248,6 +259,7 @@ F 0 "R13" V 4100 2925 50  0000 C CNN
 F 1 "1k" V 4100 3075 50  0000 C CNN
 F 2 "" V 4240 2990 50  0001 C CNN
 F 3 "~" H 4200 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4200 3000
 	-1   0    0    1   
 $EndComp
@@ -259,6 +271,7 @@ F 0 "R12" V 3875 2925 50  0000 C CNN
 F 1 "1k" V 3875 3075 50  0000 C CNN
 F 2 "" V 4015 2990 50  0001 C CNN
 F 3 "~" H 3975 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3975 3000
 	-1   0    0    1   
 $EndComp
@@ -270,6 +283,7 @@ F 0 "R11" V 3650 2925 50  0000 C CNN
 F 1 "1k" V 3650 3075 50  0000 C CNN
 F 2 "" V 3790 2990 50  0001 C CNN
 F 3 "~" H 3750 3000 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3750 3000
 	-1   0    0    1   
 $EndComp
@@ -282,6 +296,7 @@ F 0 "Q1" H 2125 4325 60  0000 L CNN
 F 1 "2N4401-ND" H 1750 3975 60  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 2541 4528 60  0001 L CNN
 F 3 "" H 2475 4450 60  0001 L CNN
+F 4 "https://www.amazon.com/gp/product/B008UFYHNI/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2275 4150
 	1    0    0    -1  
 $EndComp
@@ -293,6 +308,7 @@ F 0 "R19" V 1750 4100 50  0000 C CNN
 F 1 "1k" V 1750 4250 50  0000 C CNN
 F 2 "" V 1890 4140 50  0001 C CNN
 F 3 "~" H 1850 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    1850 4150
 	0    1    1    0   
 $EndComp
@@ -308,6 +324,7 @@ F 0 "D4" H 4475 3500 50  0000 C CNN
 F 1 "LED" H 4325 3500 50  0000 C CNN
 F 2 "" H 4425 3625 50  0001 C CNN
 F 3 "~" H 4425 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4425 3625
 	0    -1   -1   0   
 $EndComp
@@ -319,6 +336,7 @@ F 0 "D3" H 4075 3500 50  0000 C CNN
 F 1 "LED" H 3925 3500 50  0000 C CNN
 F 2 "" H 4025 3625 50  0001 C CNN
 F 3 "~" H 4025 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4025 3625
 	0    -1   -1   0   
 $EndComp
@@ -330,6 +348,7 @@ F 0 "D6" H 5275 3500 50  0000 C CNN
 F 1 "LED" H 5125 3500 50  0000 C CNN
 F 2 "" H 5225 3625 50  0001 C CNN
 F 3 "~" H 5225 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5225 3625
 	0    -1   -1   0   
 $EndComp
@@ -341,6 +360,7 @@ F 0 "D5" H 4875 3500 50  0000 C CNN
 F 1 "LED" H 4725 3500 50  0000 C CNN
 F 2 "" H 4825 3625 50  0001 C CNN
 F 3 "~" H 4825 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4825 3625
 	0    -1   -1   0   
 $EndComp
@@ -352,6 +372,7 @@ F 0 "D8" H 6075 3500 50  0000 C CNN
 F 1 "LED" H 5925 3500 50  0000 C CNN
 F 2 "" H 6025 3625 50  0001 C CNN
 F 3 "~" H 6025 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6025 3625
 	0    -1   -1   0   
 $EndComp
@@ -363,6 +384,7 @@ F 0 "D7" H 5675 3500 50  0000 C CNN
 F 1 "LED" H 5525 3500 50  0000 C CNN
 F 2 "" H 5625 3625 50  0001 C CNN
 F 3 "~" H 5625 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5625 3625
 	0    -1   -1   0   
 $EndComp
@@ -374,6 +396,7 @@ F 0 "D10" H 7150 3500 50  0000 C CNN
 F 1 "LED" H 7000 3500 50  0000 C CNN
 F 2 "" H 7100 3625 50  0001 C CNN
 F 3 "~" H 7100 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7100 3625
 	0    -1   -1   0   
 $EndComp
@@ -385,6 +408,7 @@ F 0 "D9" H 6750 3500 50  0000 C CNN
 F 1 "LED" H 6600 3500 50  0000 C CNN
 F 2 "" H 6700 3625 50  0001 C CNN
 F 3 "~" H 6700 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6700 3625
 	0    -1   -1   0   
 $EndComp
@@ -396,6 +420,7 @@ F 0 "D12" H 7950 3500 50  0000 C CNN
 F 1 "LED" H 7800 3500 50  0000 C CNN
 F 2 "" H 7900 3625 50  0001 C CNN
 F 3 "~" H 7900 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7900 3625
 	0    -1   -1   0   
 $EndComp
@@ -407,6 +432,7 @@ F 0 "D11" H 7550 3500 50  0000 C CNN
 F 1 "LED" H 7400 3500 50  0000 C CNN
 F 2 "" H 7500 3625 50  0001 C CNN
 F 3 "~" H 7500 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7500 3625
 	0    -1   -1   0   
 $EndComp
@@ -418,6 +444,7 @@ F 0 "D14" H 8750 3500 50  0000 C CNN
 F 1 "LED" H 8600 3500 50  0000 C CNN
 F 2 "" H 8700 3625 50  0001 C CNN
 F 3 "~" H 8700 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8700 3625
 	0    -1   -1   0   
 $EndComp
@@ -429,6 +456,7 @@ F 0 "D13" H 8350 3500 50  0000 C CNN
 F 1 "LED" H 8200 3500 50  0000 C CNN
 F 2 "" H 8300 3625 50  0001 C CNN
 F 3 "~" H 8300 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8300 3625
 	0    -1   -1   0   
 $EndComp
@@ -440,6 +468,7 @@ F 0 "D16" H 9550 3500 50  0000 C CNN
 F 1 "LED" H 9400 3500 50  0000 C CNN
 F 2 "" H 9500 3625 50  0001 C CNN
 F 3 "~" H 9500 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9500 3625
 	0    -1   -1   0   
 $EndComp
@@ -451,6 +480,7 @@ F 0 "D15" H 9150 3500 50  0000 C CNN
 F 1 "LED" H 9000 3500 50  0000 C CNN
 F 2 "" H 9100 3625 50  0001 C CNN
 F 3 "~" H 9100 3625 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9100 3625
 	0    -1   -1   0   
 $EndComp
@@ -462,6 +492,7 @@ F 0 "R10" V 9075 2900 50  0000 C CNN
 F 1 "1k" V 9075 3050 50  0000 C CNN
 F 2 "" V 9215 2965 50  0001 C CNN
 F 3 "~" H 9175 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9175 2975
 	-1   0    0    1   
 $EndComp
@@ -473,6 +504,7 @@ F 0 "R9" V 8850 2900 50  0000 C CNN
 F 1 "1k" V 8850 3050 50  0000 C CNN
 F 2 "" V 8990 2965 50  0001 C CNN
 F 3 "~" H 8950 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8950 2975
 	-1   0    0    1   
 $EndComp
@@ -484,6 +516,7 @@ F 0 "R8" V 8625 2900 50  0000 C CNN
 F 1 "1k" V 8625 3050 50  0000 C CNN
 F 2 "" V 8765 2965 50  0001 C CNN
 F 3 "~" H 8725 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8725 2975
 	-1   0    0    1   
 $EndComp
@@ -495,6 +528,7 @@ F 0 "R7" V 8400 2900 50  0000 C CNN
 F 1 "1k" V 8400 3050 50  0000 C CNN
 F 2 "" V 8540 2965 50  0001 C CNN
 F 3 "~" H 8500 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8500 2975
 	-1   0    0    1   
 $EndComp
@@ -506,6 +540,7 @@ F 0 "R6" V 8175 2900 50  0000 C CNN
 F 1 "1k" V 8175 3050 50  0000 C CNN
 F 2 "" V 8315 2965 50  0001 C CNN
 F 3 "~" H 8275 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8275 2975
 	-1   0    0    1   
 $EndComp
@@ -517,6 +552,7 @@ F 0 "R5" V 7950 2900 50  0000 C CNN
 F 1 "1k" V 7950 3050 50  0000 C CNN
 F 2 "" V 8090 2965 50  0001 C CNN
 F 3 "~" H 8050 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8050 2975
 	-1   0    0    1   
 $EndComp
@@ -528,6 +564,7 @@ F 0 "R4" V 7725 2900 50  0000 C CNN
 F 1 "1k" V 7725 3050 50  0000 C CNN
 F 2 "" V 7865 2965 50  0001 C CNN
 F 3 "~" H 7825 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7825 2975
 	-1   0    0    1   
 $EndComp
@@ -539,6 +576,7 @@ F 0 "R3" V 7500 2900 50  0000 C CNN
 F 1 "1k" V 7500 3050 50  0000 C CNN
 F 2 "" V 7640 2965 50  0001 C CNN
 F 3 "~" H 7600 2975 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7600 2975
 	-1   0    0    1   
 $EndComp
@@ -558,6 +596,7 @@ F 0 "U1" H 4450 2625 50  0000 C CNN
 F 1 "74HC595" H 4625 1725 50  0000 C CNN
 F 2 "" H 4650 2075 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4650 2075 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HFWB9L9/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4650 2075
 	0    -1   1    0   
 $EndComp
@@ -602,6 +641,7 @@ F 0 "C1" V 3725 2150 50  0000 L CNN
 F 1 "0.1uF" V 3950 2100 50  0000 L CNN
 F 2 "" H 3850 2200 50  0001 C CNN
 F 3 "~" H 3850 2200 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B071CQDWNY/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3850 2200
 	1    0    0    1   
 $EndComp
@@ -622,6 +662,7 @@ F 0 "R1" H 3982 1529 50  0000 R CNN
 F 1 "1k" H 3982 1620 50  0000 R CNN
 F 2 "" V 4090 1565 50  0001 C CNN
 F 3 "~" H 4050 1575 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4050 1575
 	0    1    -1   0   
 $EndComp
@@ -657,6 +698,7 @@ F 0 "D18" H 3875 4025 50  0000 C CNN
 F 1 "LED" H 3725 4025 50  0000 C CNN
 F 2 "" H 3825 4150 50  0001 C CNN
 F 3 "~" H 3825 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3825 4150
 	0    -1   -1   0   
 $EndComp
@@ -668,6 +710,7 @@ F 0 "D17" H 3475 4025 50  0000 C CNN
 F 1 "LED" H 3325 4025 50  0000 C CNN
 F 2 "" H 3425 4150 50  0001 C CNN
 F 3 "~" H 3425 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3425 4150
 	0    -1   -1   0   
 $EndComp
@@ -679,6 +722,7 @@ F 0 "D20" H 4675 4025 50  0000 C CNN
 F 1 "LED" H 4525 4025 50  0000 C CNN
 F 2 "" H 4625 4150 50  0001 C CNN
 F 3 "~" H 4625 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4625 4150
 	0    -1   -1   0   
 $EndComp
@@ -690,6 +734,7 @@ F 0 "D19" H 4275 4025 50  0000 C CNN
 F 1 "LED" H 4125 4025 50  0000 C CNN
 F 2 "" H 4225 4150 50  0001 C CNN
 F 3 "~" H 4225 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4225 4150
 	0    -1   -1   0   
 $EndComp
@@ -701,6 +746,7 @@ F 0 "D22" H 5475 4025 50  0000 C CNN
 F 1 "LED" H 5325 4025 50  0000 C CNN
 F 2 "" H 5425 4150 50  0001 C CNN
 F 3 "~" H 5425 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5425 4150
 	0    -1   -1   0   
 $EndComp
@@ -712,6 +758,7 @@ F 0 "D21" H 5075 4025 50  0000 C CNN
 F 1 "LED" H 4925 4025 50  0000 C CNN
 F 2 "" H 5025 4150 50  0001 C CNN
 F 3 "~" H 5025 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5025 4150
 	0    -1   -1   0   
 $EndComp
@@ -723,6 +770,7 @@ F 0 "D24" H 6275 4025 50  0000 C CNN
 F 1 "LED" H 6125 4025 50  0000 C CNN
 F 2 "" H 6225 4150 50  0001 C CNN
 F 3 "~" H 6225 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6225 4150
 	0    -1   -1   0   
 $EndComp
@@ -734,6 +782,7 @@ F 0 "D23" H 5875 4025 50  0000 C CNN
 F 1 "LED" H 5725 4025 50  0000 C CNN
 F 2 "" H 5825 4150 50  0001 C CNN
 F 3 "~" H 5825 4150 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5825 4150
 	0    -1   -1   0   
 $EndComp
@@ -745,6 +794,7 @@ F 0 "D26" H 7350 4050 50  0000 C CNN
 F 1 "LED" H 7200 4050 50  0000 C CNN
 F 2 "" H 7300 4175 50  0001 C CNN
 F 3 "~" H 7300 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7300 4175
 	0    -1   -1   0   
 $EndComp
@@ -756,6 +806,7 @@ F 0 "D25" H 6950 4050 50  0000 C CNN
 F 1 "LED" H 6800 4050 50  0000 C CNN
 F 2 "" H 6900 4175 50  0001 C CNN
 F 3 "~" H 6900 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6900 4175
 	0    -1   -1   0   
 $EndComp
@@ -767,6 +818,7 @@ F 0 "D28" H 8150 4050 50  0000 C CNN
 F 1 "LED" H 8000 4050 50  0000 C CNN
 F 2 "" H 8100 4175 50  0001 C CNN
 F 3 "~" H 8100 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8100 4175
 	0    -1   -1   0   
 $EndComp
@@ -778,6 +830,7 @@ F 0 "D27" H 7750 4050 50  0000 C CNN
 F 1 "LED" H 7600 4050 50  0000 C CNN
 F 2 "" H 7700 4175 50  0001 C CNN
 F 3 "~" H 7700 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7700 4175
 	0    -1   -1   0   
 $EndComp
@@ -789,6 +842,7 @@ F 0 "D30" H 8950 4050 50  0000 C CNN
 F 1 "LED" H 8800 4050 50  0000 C CNN
 F 2 "" H 8900 4175 50  0001 C CNN
 F 3 "~" H 8900 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8900 4175
 	0    -1   -1   0   
 $EndComp
@@ -800,6 +854,7 @@ F 0 "D29" H 8550 4050 50  0000 C CNN
 F 1 "LED" H 8400 4050 50  0000 C CNN
 F 2 "" H 8500 4175 50  0001 C CNN
 F 3 "~" H 8500 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8500 4175
 	0    -1   -1   0   
 $EndComp
@@ -811,6 +866,7 @@ F 0 "D32" H 9750 4050 50  0000 C CNN
 F 1 "LED" H 9600 4050 50  0000 C CNN
 F 2 "" H 9700 4175 50  0001 C CNN
 F 3 "~" H 9700 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9700 4175
 	0    -1   -1   0   
 $EndComp
@@ -822,6 +878,7 @@ F 0 "D31" H 9350 4050 50  0000 C CNN
 F 1 "LED" H 9200 4050 50  0000 C CNN
 F 2 "" H 9300 4175 50  0001 C CNN
 F 3 "~" H 9300 4175 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9300 4175
 	0    -1   -1   0   
 $EndComp
@@ -833,6 +890,7 @@ F 0 "D34" H 4050 4575 50  0000 C CNN
 F 1 "LED" H 3900 4575 50  0000 C CNN
 F 2 "" H 4000 4700 50  0001 C CNN
 F 3 "~" H 4000 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4000 4700
 	0    -1   -1   0   
 $EndComp
@@ -844,6 +902,7 @@ F 0 "D33" H 3650 4575 50  0000 C CNN
 F 1 "LED" H 3500 4575 50  0000 C CNN
 F 2 "" H 3600 4700 50  0001 C CNN
 F 3 "~" H 3600 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3600 4700
 	0    -1   -1   0   
 $EndComp
@@ -855,6 +914,7 @@ F 0 "D36" H 4850 4575 50  0000 C CNN
 F 1 "LED" H 4700 4575 50  0000 C CNN
 F 2 "" H 4800 4700 50  0001 C CNN
 F 3 "~" H 4800 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4800 4700
 	0    -1   -1   0   
 $EndComp
@@ -866,6 +926,7 @@ F 0 "D35" H 4450 4575 50  0000 C CNN
 F 1 "LED" H 4300 4575 50  0000 C CNN
 F 2 "" H 4400 4700 50  0001 C CNN
 F 3 "~" H 4400 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4400 4700
 	0    -1   -1   0   
 $EndComp
@@ -877,6 +938,7 @@ F 0 "D38" H 5650 4575 50  0000 C CNN
 F 1 "LED" H 5500 4575 50  0000 C CNN
 F 2 "" H 5600 4700 50  0001 C CNN
 F 3 "~" H 5600 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5600 4700
 	0    -1   -1   0   
 $EndComp
@@ -888,6 +950,7 @@ F 0 "D37" H 5250 4575 50  0000 C CNN
 F 1 "LED" H 5100 4575 50  0000 C CNN
 F 2 "" H 5200 4700 50  0001 C CNN
 F 3 "~" H 5200 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5200 4700
 	0    -1   -1   0   
 $EndComp
@@ -899,6 +962,7 @@ F 0 "D40" H 6450 4575 50  0000 C CNN
 F 1 "LED" H 6300 4575 50  0000 C CNN
 F 2 "" H 6400 4700 50  0001 C CNN
 F 3 "~" H 6400 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6400 4700
 	0    -1   -1   0   
 $EndComp
@@ -910,6 +974,7 @@ F 0 "D39" H 6050 4575 50  0000 C CNN
 F 1 "LED" H 5900 4575 50  0000 C CNN
 F 2 "" H 6000 4700 50  0001 C CNN
 F 3 "~" H 6000 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6000 4700
 	0    -1   -1   0   
 $EndComp
@@ -921,6 +986,7 @@ F 0 "D42" H 7525 4575 50  0000 C CNN
 F 1 "LED" H 7375 4575 50  0000 C CNN
 F 2 "" H 7475 4700 50  0001 C CNN
 F 3 "~" H 7475 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7475 4700
 	0    -1   -1   0   
 $EndComp
@@ -932,6 +998,7 @@ F 0 "D41" H 7125 4575 50  0000 C CNN
 F 1 "LED" H 6975 4575 50  0000 C CNN
 F 2 "" H 7075 4700 50  0001 C CNN
 F 3 "~" H 7075 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7075 4700
 	0    -1   -1   0   
 $EndComp
@@ -943,6 +1010,7 @@ F 0 "D44" H 8325 4575 50  0000 C CNN
 F 1 "LED" H 8175 4575 50  0000 C CNN
 F 2 "" H 8275 4700 50  0001 C CNN
 F 3 "~" H 8275 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8275 4700
 	0    -1   -1   0   
 $EndComp
@@ -954,6 +1022,7 @@ F 0 "D43" H 7925 4575 50  0000 C CNN
 F 1 "LED" H 7775 4575 50  0000 C CNN
 F 2 "" H 7875 4700 50  0001 C CNN
 F 3 "~" H 7875 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7875 4700
 	0    -1   -1   0   
 $EndComp
@@ -965,6 +1034,7 @@ F 0 "D46" H 9125 4575 50  0000 C CNN
 F 1 "LED" H 8975 4575 50  0000 C CNN
 F 2 "" H 9075 4700 50  0001 C CNN
 F 3 "~" H 9075 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9075 4700
 	0    -1   -1   0   
 $EndComp
@@ -976,6 +1046,7 @@ F 0 "D45" H 8725 4575 50  0000 C CNN
 F 1 "LED" H 8575 4575 50  0000 C CNN
 F 2 "" H 8675 4700 50  0001 C CNN
 F 3 "~" H 8675 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8675 4700
 	0    -1   -1   0   
 $EndComp
@@ -987,6 +1058,7 @@ F 0 "D48" H 9925 4575 50  0000 C CNN
 F 1 "LED" H 9775 4575 50  0000 C CNN
 F 2 "" H 9875 4700 50  0001 C CNN
 F 3 "~" H 9875 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9875 4700
 	0    -1   -1   0   
 $EndComp
@@ -998,6 +1070,7 @@ F 0 "D47" H 9525 4575 50  0000 C CNN
 F 1 "LED" H 9375 4575 50  0000 C CNN
 F 2 "" H 9475 4700 50  0001 C CNN
 F 3 "~" H 9475 4700 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9475 4700
 	0    -1   -1   0   
 $EndComp
@@ -1009,6 +1082,7 @@ F 0 "D50" H 4250 5125 50  0000 C CNN
 F 1 "LED" H 4100 5125 50  0000 C CNN
 F 2 "" H 4200 5250 50  0001 C CNN
 F 3 "~" H 4200 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4200 5250
 	0    -1   -1   0   
 $EndComp
@@ -1020,6 +1094,7 @@ F 0 "D49" H 3850 5125 50  0000 C CNN
 F 1 "LED" H 3700 5125 50  0000 C CNN
 F 2 "" H 3800 5250 50  0001 C CNN
 F 3 "~" H 3800 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    3800 5250
 	0    -1   -1   0   
 $EndComp
@@ -1031,6 +1106,7 @@ F 0 "D52" H 5050 5125 50  0000 C CNN
 F 1 "LED" H 4900 5125 50  0000 C CNN
 F 2 "" H 5000 5250 50  0001 C CNN
 F 3 "~" H 5000 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5000 5250
 	0    -1   -1   0   
 $EndComp
@@ -1042,6 +1118,7 @@ F 0 "D51" H 4650 5125 50  0000 C CNN
 F 1 "LED" H 4500 5125 50  0000 C CNN
 F 2 "" H 4600 5250 50  0001 C CNN
 F 3 "~" H 4600 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    4600 5250
 	0    -1   -1   0   
 $EndComp
@@ -1053,6 +1130,7 @@ F 0 "D54" H 5850 5125 50  0000 C CNN
 F 1 "LED" H 5700 5125 50  0000 C CNN
 F 2 "" H 5800 5250 50  0001 C CNN
 F 3 "~" H 5800 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5800 5250
 	0    -1   -1   0   
 $EndComp
@@ -1064,6 +1142,7 @@ F 0 "D53" H 5450 5125 50  0000 C CNN
 F 1 "LED" H 5300 5125 50  0000 C CNN
 F 2 "" H 5400 5250 50  0001 C CNN
 F 3 "~" H 5400 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    5400 5250
 	0    -1   -1   0   
 $EndComp
@@ -1075,6 +1154,7 @@ F 0 "D56" H 6650 5125 50  0000 C CNN
 F 1 "LED" H 6500 5125 50  0000 C CNN
 F 2 "" H 6600 5250 50  0001 C CNN
 F 3 "~" H 6600 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6600 5250
 	0    -1   -1   0   
 $EndComp
@@ -1086,6 +1166,7 @@ F 0 "D55" H 6250 5125 50  0000 C CNN
 F 1 "LED" H 6100 5125 50  0000 C CNN
 F 2 "" H 6200 5250 50  0001 C CNN
 F 3 "~" H 6200 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    6200 5250
 	0    -1   -1   0   
 $EndComp
@@ -1097,6 +1178,7 @@ F 0 "D58" H 7725 5125 50  0000 C CNN
 F 1 "LED" H 7575 5125 50  0000 C CNN
 F 2 "" H 7675 5250 50  0001 C CNN
 F 3 "~" H 7675 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7675 5250
 	0    -1   -1   0   
 $EndComp
@@ -1108,6 +1190,7 @@ F 0 "D57" H 7325 5125 50  0000 C CNN
 F 1 "LED" H 7175 5125 50  0000 C CNN
 F 2 "" H 7275 5250 50  0001 C CNN
 F 3 "~" H 7275 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    7275 5250
 	0    -1   -1   0   
 $EndComp
@@ -1119,6 +1202,7 @@ F 0 "D60" H 8525 5125 50  0000 C CNN
 F 1 "LED" H 8375 5125 50  0000 C CNN
 F 2 "" H 8475 5250 50  0001 C CNN
 F 3 "~" H 8475 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8475 5250
 	0    -1   -1   0   
 $EndComp
@@ -1130,6 +1214,7 @@ F 0 "D59" H 8125 5125 50  0000 C CNN
 F 1 "LED" H 7975 5125 50  0000 C CNN
 F 2 "" H 8075 5250 50  0001 C CNN
 F 3 "~" H 8075 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8075 5250
 	0    -1   -1   0   
 $EndComp
@@ -1141,6 +1226,7 @@ F 0 "D62" H 9325 5125 50  0000 C CNN
 F 1 "LED" H 9175 5125 50  0000 C CNN
 F 2 "" H 9275 5250 50  0001 C CNN
 F 3 "~" H 9275 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9275 5250
 	0    -1   -1   0   
 $EndComp
@@ -1152,6 +1238,7 @@ F 0 "D61" H 8925 5125 50  0000 C CNN
 F 1 "LED" H 8775 5125 50  0000 C CNN
 F 2 "" H 8875 5250 50  0001 C CNN
 F 3 "~" H 8875 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    8875 5250
 	0    -1   -1   0   
 $EndComp
@@ -1163,6 +1250,7 @@ F 0 "D64" H 10125 5125 50  0000 C CNN
 F 1 "LED" H 9975 5125 50  0000 C CNN
 F 2 "" H 10075 5250 50  0001 C CNN
 F 3 "~" H 10075 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    10075 5250
 	0    -1   -1   0   
 $EndComp
@@ -1174,6 +1262,7 @@ F 0 "D63" H 9725 5125 50  0000 C CNN
 F 1 "LED" H 9575 5125 50  0000 C CNN
 F 2 "" H 9675 5250 50  0001 C CNN
 F 3 "~" H 9675 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B00XT0P1VQ/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    9675 5250
 	0    -1   -1   0   
 $EndComp
@@ -1359,6 +1448,7 @@ F 0 "Q2" H 2200 4900 60  0000 L CNN
 F 1 "2N4401-ND" H 1825 4550 60  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 2616 5103 60  0001 L CNN
 F 3 "" H 2550 5025 60  0001 L CNN
+F 4 "https://www.amazon.com/gp/product/B008UFYHNI/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2350 4725
 	1    0    0    -1  
 $EndComp
@@ -1370,6 +1460,7 @@ F 0 "R20" V 1825 4675 50  0000 C CNN
 F 1 "1k" V 1825 4825 50  0000 C CNN
 F 2 "" V 1965 4715 50  0001 C CNN
 F 3 "~" H 1925 4725 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    1925 4725
 	0    1    1    0   
 $EndComp
@@ -1383,6 +1474,7 @@ F 0 "Q3" H 2300 5425 60  0000 L CNN
 F 1 "2N4401-ND" H 1925 5075 60  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 2716 5628 60  0001 L CNN
 F 3 "" H 2650 5550 60  0001 L CNN
+F 4 "https://www.amazon.com/gp/product/B008UFYHNI/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2450 5250
 	1    0    0    -1  
 $EndComp
@@ -1394,6 +1486,7 @@ F 0 "R21" V 1925 5200 50  0000 C CNN
 F 1 "1k" V 1925 5350 50  0000 C CNN
 F 2 "" V 2065 5240 50  0001 C CNN
 F 3 "~" H 2025 5250 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2025 5250
 	0    1    1    0   
 $EndComp
@@ -1407,6 +1500,7 @@ F 0 "Q4" H 2400 5925 60  0000 L CNN
 F 1 "2N4401-ND" H 2025 5575 60  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 2816 6128 60  0001 L CNN
 F 3 "" H 2750 6050 60  0001 L CNN
+F 4 "https://www.amazon.com/gp/product/B008UFYHNI/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2550 5750
 	1    0    0    -1  
 $EndComp
@@ -1418,6 +1512,7 @@ F 0 "R22" V 2025 5700 50  0000 C CNN
 F 1 "1k" V 2025 5850 50  0000 C CNN
 F 2 "" V 2165 5740 50  0001 C CNN
 F 3 "~" H 2125 5750 50  0001 C CNN
+F 4 "https://www.amazon.com/gp/product/B07HDDWFDD/" H 0   0   50  0001 C CNN "Where to Buy"
 	1    2125 5750
 	0    1    1    0   
 $EndComp
